@@ -18,12 +18,17 @@ function createListElement(){
   li.appendChild(document.createTextNode(input.value));
   ul.appendChild(li);
   input.value = "";
+  addDeleteButton(li);
+  // var button = document.createElement("Button");
+  // button.innerHTML = "Delete";
+  // li.appendChild(button);
+}
+
+function addDeleteButton(li){
   var button = document.createElement("Button");
   button.innerHTML = "Delete";
   li.appendChild(button);
 }
-
-
 
 
 function addListAfterClick() {
