@@ -1,0 +1,13 @@
+ul {
+  list-style: none;
+
+}
+
+.delete{
+ color: red;
+}
+
+
+.done {
+  text-decoration: line-through;
+}
