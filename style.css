@@ -1,0 +1,13 @@
+ul {
+  list-style: none;
+
+}
+
+.delete{
+ float: center;
+}
+
+
+.done {
+  text-decoration: line-through;
+}
