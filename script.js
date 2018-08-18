@@ -28,9 +28,27 @@ function addDeleteButton(li){
   li.classList.add("delete");
   li.appendChild(btnDelete);
 
+=======
+  // var button = document.createElement("Button");
+  // button.innerHTML = "Delete";
+  // li.appendChild(button);
 }
 
+function addDeleteButton(li){
+  var button = document.createElement("Button");
+  button.innerHTML = "Delete";
+  li.appendChild(button);
+>>>>>>> 4ff8b8734fe8d0638b1d0d2023a780c8c17ea355
+}
 
+function addToggleListener(li){
+  li.addEventListener("click",toggleItem);
+}
+
+function toggleItem(event){
+  console.log("a click happened")
+  event.target.classList.toggle("done");
+}
 
 function deleteListItem() {
 
@@ -76,4 +94,12 @@ function addListAfterKeypress(event){
 
 button.addEventListener("click", addListAfterClick);
 
+<<<<<<< HEAD
 input.addEventListener("keypress",addListAfterKeypress);
+=======
+//attempt to cross out completed items
+function checkListElement() {
+  document.querySelectorAll("li").classList.toggle("done");
+}
+// li.addEventListener("click", checkListElement);
+>>>>>>> 4ff8b8734fe8d0638b1d0d2023a780c8c17ea355
