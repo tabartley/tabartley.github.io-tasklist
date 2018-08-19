@@ -10,7 +10,6 @@ function inputLength(){
 }
 
 
-
 // This adds input with delete button
 function createListElement(){
   var li = document.createElement("li");
@@ -19,47 +18,32 @@ function createListElement(){
   input.value = "";
   addDeleteButton(li);
   addToggleListener(li);
-
-}
+  }
 
 function addDeleteButton(li){
   var btnDelete = document.createElement("button");
   btnDelete.innerHTML = "Delete";
   li.classList.add("delete");
   li.appendChild(btnDelete);
+  btnDelete.onclick = deleteListItem;
 
-=======
-  // var button = document.createElement("Button");
-  // button.innerHTML = "Delete";
-  // li.appendChild(button);
 }
 
-function addDeleteButton(li){
-  var button = document.createElement("Button");
-  button.innerHTML = "Delete";
-  li.appendChild(button);
->>>>>>> 4ff8b8734fe8d0638b1d0d2023a780c8c17ea355
-}
 
-function addToggleListener(li){
-  li.addEventListener("click",toggleItem);
-}
-
-function toggleItem(event){
-  console.log("a click happened")
-  event.target.classList.toggle("done");
-}
 
 function deleteListItem() {
+// btnDelete.onClick = ul.removeChild("li");
+// li.target.parentElement.removeChild(li.target);
+ // ul.target.parentElement.removeChild(li.target);
+// removeChild(createListElement);
+ // ul.removeChild(li);
+ this.parentNode.parentNode.removeChild(this.parentNode);
+	}
 
-}
-
-btnDelete.addEventListener("click", deleteListItem);
 
 
 
-
-
+  // btnDelete.addEventListener("click", deleteListItem);
 
 
 
@@ -68,10 +52,11 @@ function addToggleListener(li){
 }
 
 function toggleItem(event){
-  console.log("a click happened");
-  event.target.classList.toggle("done");
+  // console.log("a click happened");
+  	if (event.target.tagName === "LI") {
+      event.target.classList.toggle("done");
 }
-
+}
 
 function addListAfterClick() {
 
@@ -89,17 +74,6 @@ function addListAfterKeypress(event){
     }
 
 
-
-
-
 button.addEventListener("click", addListAfterClick);
 
-<<<<<<< HEAD
 input.addEventListener("keypress",addListAfterKeypress);
-=======
-//attempt to cross out completed items
-function checkListElement() {
-  document.querySelectorAll("li").classList.toggle("done");
-}
-// li.addEventListener("click", checkListElement);
->>>>>>> 4ff8b8734fe8d0638b1d0d2023a780c8c17ea355
